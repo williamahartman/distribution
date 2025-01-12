@@ -75,7 +75,7 @@ case "${DEVICE}" in
   SM8250|SM8550)
     [ "${ENABLE_32BIT}" == "true" ] && EMUS_32BIT="box86 daedalusx64-sa desmume-lr gpsp-lr pcsx_rearmed-lr"
     PKG_EMUS+=" aethersx2-sa azahar-sa box64 cemu-sa dolphin-sa drastic-sa lime3ds-sa melonds-sa portmaster rpcs3-sa scummvmsa supermodel-sa \
-               yabasanshiro-sa xemu-sa duckstation-sa"
+               yabasanshiro-sa suyu xemu-sa duckstation-sa"
     LIBRETRO_CORES+=" beetle-psx-lr beetle-saturn-lr bsnes-lr bsnes-hd-lr dolphin-lr flycast-lr geolith-lr panda3ds-lr pcsx_rearmed-lr uae4arm kronos-lr"
     PKG_RETROARCH+=" retropie-shaders"
   ;;
@@ -1207,8 +1207,8 @@ makeinstall_target() {
 
   ### Various WASM-4
   add_emu_core wasm4 retroarch wasm4 true
-  add_es_system wasm4 
-  
+  add_es_system wasm4
+
   ### NEC TurboGrafx 16
   add_emu_core tg16 retroarch beetle_pce_fast true
   add_emu_core tg16 retroarch beetle_pce false
@@ -1358,6 +1358,6 @@ makeinstall_target() {
   mkdir -p ${INSTALL}/usr/lib/autostart/common
   cp ${PKG_DIR}/autostart/* ${INSTALL}/usr/lib/autostart/common
   chmod 0755 ${INSTALL}/usr/lib/autostart/common/*
- 
+
 }
 
