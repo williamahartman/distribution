@@ -43,7 +43,7 @@
         <developer>Portmaster</developer>
         <publisher>Portmaster</publisher>
         <rating>5.0</rating>
-        <releasedate>2022</releasedate>         
+        <releasedate>2022</releasedate>
         <genre>Tool</genre>
         <players>1</players>
         <image>./images/portmaster.svg</image>
@@ -263,6 +263,18 @@
         <genre>Emulator</genre>
         <players>1</players>
         <image>./images/xemu.svg</image>
+    </game>
+    <game>
+        <path>./Start Suyu.sh</path>
+        <name>Start Suyu</name>
+        <desc>Opens the Suyu GUI (Switch) to enable global configuration changes to be made directly to the emulator. It's recommended to have a mouse and keyboard available to modify settings.</desc>
+        <developer>JELOS</developer>
+        <publisher>JELOS</publisher>
+        <rating>5.0</rating>
+        <releasedate>2023</releasedate>
+        <genre>Emulator</genre>
+        <players>1</players>
+        <image>./images/suyu.svg</image>
     </game>
     <game>
         <path>./Scan id Tech Files.sh</path>

@@ -75,7 +75,7 @@ case "${DEVICE}" in
   SM8250|SM8550)
     [ "${ENABLE_32BIT}" == "true" ] && EMUS_32BIT="box86 daedalusx64-sa desmume-lr gpsp-lr pcsx_rearmed-lr"
     PKG_EMUS+=" aethersx2-sa azahar-sa box64 cemu-sa dolphin-sa drastic-sa lime3ds-sa melonds-sa portmaster rpcs3-sa scummvmsa supermodel-sa \
-               yabasanshiro-sa suyu xemu-sa duckstation-sa"
+               yabasanshiro-sa suyu-sa xemu-sa duckstation-sa"
     LIBRETRO_CORES+=" beetle-psx-lr beetle-saturn-lr bsnes-lr bsnes-hd-lr dolphin-lr flycast-lr geolith-lr panda3ds-lr pcsx_rearmed-lr uae4arm kronos-lr"
     PKG_RETROARCH+=" retropie-shaders"
   ;;
@@ -1308,6 +1308,15 @@ makeinstall_target() {
   add_emu_core windows wine wine true
   add_es_system windows
 
+  ### Nintendo Switch
+  case ${DEVICE} in
+    SD865)
+      add_emu_core switch suyu suyu-sa true
+      add_es_system switch
+      install_script "Start Suyu.sh"
+    ;;
+  esac
+
   ### Doom
   add_emu_core doom gzdoom gzdoom-sa true
   add_es_system doom
@@ -1360,4 +1369,3 @@ makeinstall_target() {
   chmod 0755 ${INSTALL}/usr/lib/autostart/common/*
 
 }
-
