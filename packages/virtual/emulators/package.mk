@@ -1310,7 +1310,7 @@ makeinstall_target() {
 
   ### Nintendo Switch
   case ${DEVICE} in
-    SD865)
+    SM8250)
       add_emu_core switch suyu suyu-sa true
       add_es_system switch
       install_script "Start Suyu.sh"
